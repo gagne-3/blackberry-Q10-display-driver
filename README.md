@@ -62,3 +62,5 @@ Compiled with information from Page 28 of the schematic.
 
 ## Display Panel Controller IC
 Based on some basic googling and ChatGPT-ing, I believe the most likely controller IC for this panel is the Samsung S6E63M0.
+
+Drivers for this controller IC already exist within the [Linux Kernel](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/panel/panel-samsung-s6e63m0.c)
