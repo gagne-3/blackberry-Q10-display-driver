@@ -59,3 +59,6 @@ I will not link to the blog in question since it appeared to be a reupload. The 
 34 | GND | Ground
 
 Compiled with information from Page 28 of the schematic.
+
+## Display Panel Controller IC
+Based on some basic googling and ChatGPT-ing, I believe the most likely controller IC for this panel is the Samsung S6E63M0.
