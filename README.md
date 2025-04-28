@@ -19,7 +19,7 @@ Unfortunately, once I got my hands on a Q10 display module, I realized that it d
 
 This caused me to lose hope on this project. Without a schematic, it was nearly impossible to create a driver board to make this display functional. I was considering going in with a multimeter and painstakingly reverse engineering the electronics attached to the display assembly. Thankfully, I caught a lucky break. While searching for schematics, I decided to search for general BlackBerry Q10 Schematics. That's when I fell upon a random blog that had a bunch of PDFs uploaded to it. These PDFs contained schematics for the entire mainboard of the Q10, which was exactly what I needed.
 
-I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found in this repo.
+I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found in my main [BlackBerry Pi repo](https://github.com/gagne-3/blackberry-pi-cm4/tree/main/schematics/SQN100-1).
 
 # Technical Details
 
@@ -89,3 +89,44 @@ The following pinout of the Raspberry Pi 4b display connector is compiled from i
 | 13 | GND | Ground |
 | 14 | 3V3 | Display power (3.3V) |
 | 15 | 3V3 | Display power (3.3V) |
+1 | GND | Ground
+2 | GND | Ground
+3 | VSYS_F | Main system power
+4 | V2_85TSP_F | Touchscreen AVDD (2.85V)
+5 | VSYS_F | Main system power
+6 | V1_8TSP_F | Touchscreen VDD (1.8V)
+7 | GND | Ground
+8 | GND | Ground
+9 | — | Not Connected
+10 | I2C_SCL_TS | Touchscreen I²C Clock
+11 | GND | Ground
+12 | I2C_SDA_TS | Touchscreen I²C Data
+13 | OLED_MIPI:D1_P | MIPI DSI Data Lane 1+
+14 | GND | Ground
+15 | OLED_MIPI:D1_N | MIPI DSI Data Lane 1−
+16 | TSCRN_INT_N | Touchscreen Interrupt
+17 | GND | Ground
+18 | TSCRN_RST_N | Touchscreen Reset
+19 | OLED_MIPI:CLK_P | MIPI DSI Clock+
+20 | GND | Ground
+21 | OLED_MIPI:CLK_N | MIPI DSI Clock−
+22 | V3_10LED_F | Display power (3.1V)
+23 | GND | Ground
+24 | V3_10LED_F | Display power (3.1V)
+25 | OLED_MIPI:D0_P | MIPI DSI Data Lane 0+
+26 | GND | Ground
+27 | OLED_MIPI:D0_N | MIPI DSI Data Lane 0−
+28 | V2_20LED_F | Display secondary power (2.2V)
+29 | GND | Ground
+30 | V2_20LED_F | Display secondary power (2.2V)
+31 | OLED_RST_N | Display Reset
+32 | GND | Ground
+33 | GND | Ground
+34 | GND | Ground
+
+Compiled with information from Page 28 of the schematic.
+
+## Display Panel Controller IC
+Based on some basic googling and ChatGPT-ing, I believe the most likely controller IC for this panel is the Samsung S6E63M0.
+
+Drivers for this controller IC already exist within the [Linux Kernel](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/panel/panel-samsung-s6e63m0.c)
