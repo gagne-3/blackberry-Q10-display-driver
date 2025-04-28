@@ -1,9 +1,9 @@
-> [!CAUTION]
-> Heavy work in progress, project is to be considered non-functional and incomplete.
-
 # BlackBerry Q10 Display Assembly Driver
 
 This repo contains the schematics and code for a display driver meant to provide compatibility with the BlackBerry Q10 display and touch screen. This is part of my [BlackBerry Pi project](https://github.com/gagne-3/blackberry-pi-cm4).
+
+> [!CAUTION]
+> Heavy work in progress, project is to be considered non-functional and incomplete.
 
 ## Background Information
 
@@ -68,7 +68,7 @@ Below is a pinout of the Q10 motherboard display connector socket compiled from 
 
 ## Raspberry Pi Display Connector Pinout
 
-The display connector on the Raspberry Pi 4b is a 15 pin 1mm pitch FFC connector, specifically SFW15R-2STE1LF.
+The display connector on the Raspberry Pi 4b is a 15 pin 1mm pitch FFC connector, specifically `SFW15R-2STE1LF`.
 
 The following pinout of the Raspberry Pi 4b display connector is compiled from information from the [official Raspberry Pi 4b Schematic.](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf)
 
@@ -92,6 +92,21 @@ The following pinout of the Raspberry Pi 4b display connector is compiled from i
 
 ## Display Panel Controller IC
 
-Based on some basic googling and ChatGPT-ing, I believe the most likely controller IC for this panel is the Samsung S6E63M0.
+Based on some basic googling and ChatGPT-ing, I believe the most likely controller IC for this panel is the Samsung S6E63M0. This IC is used in other Super AMOLED smartphone display panels of the time period and features the same integrated touchscreen architecture as is present on the Q10 display assembly.
 
-Drivers for this controller IC already exist within the [Linux Kernel](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/panel/panel-samsung-s6e63m0.c)
+Drivers for this controller IC already exist within the [Linux Kernel](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/panel/panel-samsung-s6e63m0-dsi.c)
+
+## Power Supply Electronics
+
+The Q10 display assembly requires four different voltages: 1.8, 2.2, 2.85, and 3.1 volts. The Raspberry Pi 4b display connector supplies 3.3 volts. We can provide these voltages by using LDO regulators. 1.8 volts is common for regulators, however adjustable regulators will be needed for the 2.2, 2.85, and 3.1 volt supplies. Below is a table detailing the necessary ICs for the driver board:
+
+| Voltage | Part Number |
+| ------- | ----------- |
+| 1.8v | TLV75718PDBVR |
+| 2.2v | TLV75901PDRVR |
+| 2.85v | TLV75901PDRVR |
+| 3.1v | TLV75901PDRVR |
+
+### Adjustable Voltage Resistance Values
+
+In order to adjust the output voltage of the TLV759 LDOs, two resistors need to be connected, the ratio of which determines the output voltage. Below are the necessary resistance values for the LDOs:
