@@ -110,3 +110,13 @@ The Q10 display assembly requires four different voltages: 1.8, 2.2, 2.85, and 3
 ### Adjustable Voltage Resistance Values
 
 In order to adjust the output voltage of the TLV759 LDOs, two resistors need to be connected, the ratio of which determines the output voltage. Below are the necessary resistance values for the LDOs:
+
+| Voltage | R1 | R2 |
+| ------- | -- | -- |
+| 2.2v | 30k | 10k |
+| 2.85v | 38.3k | 9.09k |
+| 3.1v | 42.2k | 9.09k |
+
+## Logic Level Shifting
+
+For the touchscreen reset and interrupt pins, we need to use a logic level shifter in order to be able to connect these to the GPIO of the raspberry pi. To do this, we can use a `TXB0102`.
