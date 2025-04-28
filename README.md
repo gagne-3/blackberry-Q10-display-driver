@@ -25,7 +25,7 @@ I will not link to the blog in question since it appeared to be a reupload. The 
 
 ## Q10 Display Connector Pinout
 
-The display connector on the Q10 display assembly is a `Hirose BM14B(0.8)-30DP-0.4V(51)`, which means that the driver board requires a `Hirose BM14B(0.8)-30DS-0.4V(51)` socket to connect. As far as I could tell, there is no difference between the `(51)` and `(53)` versions of the connector.
+The display connector on the Q10 display assembly is a `Hirose BM14B(0.8)-30DP-0.4V(51)`, which means that the driver board requires a `Hirose BM14B(0.8)-30DS-0.4V(51)` socket to connect.
 
 Below is a pinout of the Q10 motherboard display connector socket compiled from information present on Page 28 of the schematic.
 
