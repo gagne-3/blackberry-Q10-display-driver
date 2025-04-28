@@ -102,7 +102,7 @@ The Q10 display assembly requires four different voltages: 1.8, 2.2, 2.85, and 3
 
 | Voltage | Part Number |
 | ------- | ----------- |
-| 1.8v | TLV75718PDBVR |
+| 1.8v | TLV75718PDRVR |
 | 2.2v | TLV75901PDRVR |
 | 2.85v | TLV75901PDRVR |
 | 3.1v | TLV75901PDRVR |
