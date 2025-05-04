@@ -31,40 +31,42 @@ Below is a pinout of the Q10 motherboard display connector socket compiled from 
 
 | Pin | Signal Name | Description |
 | --- | ----------- | ----------- |
-| 1 | GND | Ground |
-| 2 | GND | Ground |
+| MP1 | GND | Ground |
+| MP2 | GND | Ground |
+| 1 | VSYS_F | Main system power |
+| 2 | V2_85TSP_F | Touchscreen AVDD (2.85V) |
 | 3 | VSYS_F | Main system power |
-| 4 | V2_85TSP_F | Touchscreen AVDD (2.85V) |
-| 5 | VSYS_F | Main system power |
-| 6 | V1_8TSP_F | Touchscreen VDD (1.8V) |
-| 7 | GND | Ground |
-| 8 | GND | Ground |
-| 9 | — | Not Connected |
-| 10 | I2C_SCL_TS | Touchscreen I²C Clock |
-| 11 | GND | Ground |
-| 12 | I2C_SDA_TS | Touchscreen I²C Data |
-| 13 | OLED_MIPI:D1_P | MIPI DSI Data Lane 1+ |
-| 14 | GND | Ground |
-| 15 | OLED_MIPI:D1_N | MIPI DSI Data Lane 1− |
-| 16 | TSCRN_INT_N | Touchscreen Interrupt |
-| 17 | GND | Ground |
-| 18 | TSCRN_RST_N | Touchscreen Reset |
-| 19 | OLED_MIPI:CLK_P | MIPI DSI Clock+ |
-| 20 | GND | Ground |
-| 21 | OLED_MIPI:CLK_N | MIPI DSI Clock− |
+| 4 | V1_8TSP_F | Touchscreen VDD (1.8V) |
+| 5 | GND | Ground |
+| 6 | GND | Ground |
+| 7 | — | Not Connected |
+| 8 | I2C_SCL_TS | Touchscreen I²C Clock |
+| 9 | GND | Ground |
+| 10 | I2C_SDA_TS | Touchscreen I²C Data |
+| 11 | OLED_MIPI:D1_P | MIPI DSI Data Lane 1+ |
+| 12 | GND | Ground |
+| 13 | OLED_MIPI:D1_N | MIPI DSI Data Lane 1− |
+| 14 | TSCRN_INT_N | Touchscreen Interrupt |
+| 15 | GND | Ground |
+| 16 | TSCRN_RST_N | Touchscreen Reset |
+| 17 | OLED_MIPI:CLK_P | MIPI DSI Clock+ |
+| 18 | GND | Ground |
+| 19 | OLED_MIPI:CLK_N | MIPI DSI Clock− |
+| 20 | V3_10LED_F | Display power (3.1V) |
+| 21 | GND | Ground |
 | 22 | V3_10LED_F | Display power (3.1V) |
-| 23 | GND | Ground |
-| 24 | V3_10LED_F | Display power (3.1V) |
-| 25 | OLED_MIPI:D0_P | MIPI DSI Data Lane 0+ |
-| 26 | GND | Ground |
-| 27 | OLED_MIPI:D0_N | MIPI DSI Data Lane 0− |
+| 23 | OLED_MIPI:D0_P | MIPI DSI Data Lane 0+ |
+| 24 | GND | Ground |
+| 25 | OLED_MIPI:D0_N | MIPI DSI Data Lane 0− |
+| 26 | V2_20LED_F | Display secondary power (2.2V) |
+| 27 | GND | Ground |
 | 28 | V2_20LED_F | Display secondary power (2.2V) |
-| 29 | GND | Ground |
-| 30 | V2_20LED_F | Display secondary power (2.2V) |
-| 31 | OLED_RST_N | Display Reset |
-| 32 | GND | Ground |
-| 33 | GND | Ground |
-| 34 | GND | Ground |
+| 29 | OLED_RST_N | Display Reset |
+| 30 | GND | Ground |
+| MP3 | GND | Ground |
+| MP4 | GND | Ground |
+
+Note: the pinout from Hirose is different to how the Blackberry schematic labels the pins. The official pinout from the manufacturer has the edge pins labeled as "MP#" while the Blackberry schematic includes them in the pin count. These edge pins are all grounds anyway, so I have included the official manufacturer pinout to match to the schematic.
 
 ## Raspberry Pi Display Connector Pinout
 
