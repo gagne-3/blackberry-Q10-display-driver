@@ -1,7 +1,6 @@
 # BlackBerry Q10 Display Assembly Driver
 
-This repo contains the schematics and code for a display driver meant to provide compatibility with the BlackBerry Q10 display and touch screen. This is part of my [BlackBerry Pi project](https://github.com/gagne-3/blackberry-pi-cm4).
-
+This repo contains the schematics and code for a display driver meant to provide compatibility with the BlackBerry Q10 display and touch screen.
 > [!CAUTION]
 > Heavy work in progress, project is to be considered non-functional and incomplete.
 
@@ -19,13 +18,13 @@ Unfortunately, once I got my hands on a Q10 display module, I realized that it d
 
 This caused me to lose hope on this project. Without a schematic, it was nearly impossible to create a driver board to make this display functional. I was considering going in with a multimeter and painstakingly reverse engineering the electronics attached to the display assembly. Thankfully, I caught a lucky break. While searching for schematics, I decided to search for general BlackBerry Q10 Schematics. That's when I fell upon a random blog that had a bunch of PDFs uploaded to it. These PDFs contained schematics for the entire mainboard of the Q10, which was exactly what I needed.
 
-I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found in my main [BlackBerry Pi repo](https://github.com/gagne-3/blackberry-pi-cm4/tree/main/schematics/SQN100-1).
+I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found in my main [BlackBerry Pi repo](schematics/sch-44860-106_rev1.pdf).
 
 # Technical Details
 
 ## Q10 Display Connector Pinout
 
-The display connector on the Q10 display assembly is a `Hirose BM14B(0.8)-30DP-0.4V(51)`, which means that the driver board requires a `Hirose BM14B(0.8)-30DS-0.4V(51)` socket to connect.
+The display connector on the Q10 display assembly is a `Hirose BM14B(0.8)-30DP-0.4V`, which means that the driver board requires a `Hirose BM14B(0.8)-30DS-0.4V` socket to connect.
 
 Below is a pinout of the Q10 motherboard display connector socket compiled from information present on Page 28 of the schematic.
 
