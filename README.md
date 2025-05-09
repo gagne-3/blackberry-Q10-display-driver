@@ -18,7 +18,7 @@ Unfortunately, once I got my hands on a Q10 display module, I realized that it d
 
 This caused me to lose hope on this project. Without a schematic, it was nearly impossible to create a driver board to make this display functional. I was considering going in with a multimeter and painstakingly reverse engineering the electronics attached to the display assembly. Thankfully, I caught a lucky break. While searching for schematics, I decided to search for general BlackBerry Q10 Schematics. That's when I fell upon a random blog that had a bunch of PDFs uploaded to it. These PDFs contained schematics for the entire mainboard of the Q10, which was exactly what I needed.
 
-I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found in my main [BlackBerry Pi repo](schematics/sch-44860-106_rev1.pdf).
+I will not link to the blog in question since it appeared to be a reupload. The PDFs are watermarked with a URL to what seems to be a dead website. a copy of the schematic can be found [here](schematics/sch-44860-106_rev1.pdf).
 
 # Technical Details
 
